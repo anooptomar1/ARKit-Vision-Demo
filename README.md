@@ -1,4 +1,4 @@
-# ARKit-Vison-Demo
+# ARKit-Vision-Demo
 Simple demo app that uses the Vision API and ARKit.
 
 Uses Vision to detect a face and then use ARKit to place a node at the site of the face.
