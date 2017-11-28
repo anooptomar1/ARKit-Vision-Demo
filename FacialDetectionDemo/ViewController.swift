@@ -63,8 +63,26 @@ class ViewController: UIViewController, ARSessionDelegate {
         }
         
         // Process the frame on a background thread
-        DispatchQueue.global(qos: .userInitiated).async {
-            try? VNImageRequestHandler(cvPixelBuffer: frame.capturedImage, options:[:]).perform([faceRequest])
+        DispatchQueue.global(qos: .userInitiated).async {            
+            try? VNImageRequestHandler(cvPixelBuffer: frame.capturedImage, orientation: self.deviceOrientation(), options: [:]).perform([faceRequest])
         }
+    }
+    
+    /// Determine what orientation the device is currently in.
+    /// This is essential to get accurate results from VNImageRequestHandler
+    /// because it is looking for faces based on which direction the face
+    /// is orientated.
+    ///
+    /// - Returns: .up = landscape
+    ///            .right = portrait
+    func deviceOrientation() -> CGImagePropertyOrientation {
+        let orientation: CGImagePropertyOrientation
+        
+        if UIDevice.current.orientation.isLandscape {
+            orientation = CGImagePropertyOrientation.up
+        } else {
+            orientation = CGImagePropertyOrientation.right
+        }
+        return orientation
     }
 }
