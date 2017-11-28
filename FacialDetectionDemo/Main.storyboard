@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="People_Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bvk-As-lHh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hZ5-tm-vln">
+                                <rect key="frame" x="126.5" y="30" width="122" height="41"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracking status:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLm-Vr-Ykd">
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face count: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ick-59-qp8">
+                                        <rect key="frame" x="9" y="20.5" width="104" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OGk-V8-3y0">
+                                <rect key="frame" x="30" y="323" width="315.5" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move phone around room for setup of AR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="exD-nA-FLr">
+                                        <rect key="frame" x="0.0" y="0.0" width="315.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bvk-As-lHh" secondAttribute="trailing" id="2An-hc-1m4"/>
+                            <constraint firstItem="OGk-V8-3y0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6ft-DC-bmS"/>
+                            <constraint firstItem="Bvk-As-lHh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BUF-IW-owm"/>
+                            <constraint firstItem="OGk-V8-3y0" firstAttribute="centerY" secondItem="Bvk-As-lHh" secondAttribute="centerY" id="DxQ-cF-HCX"/>
+                            <constraint firstItem="hZ5-tm-vln" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="HAt-FJ-UGq"/>
+                            <constraint firstItem="OGk-V8-3y0" firstAttribute="centerX" secondItem="hZ5-tm-vln" secondAttribute="centerX" id="Kqt-bB-AWH"/>
+                            <constraint firstItem="Bvk-As-lHh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pux-my-KAh"/>
+                            <constraint firstItem="hZ5-tm-vln" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R94-nI-ysJ"/>
+                            <constraint firstItem="Bvk-As-lHh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iou-su-WST"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraStatus" destination="pLm-Vr-Ykd" id="mxU-ce-cj6"/>
+                        <outlet property="faceCountLabel" destination="Ick-59-qp8" id="GgL-ka-ciE"/>
+                        <outlet property="movePhoneLabel" destination="exD-nA-FLr" id="mgy-RN-h8j"/>
+                        <outlet property="sceneView" destination="Bvk-As-lHh" id="PG3-TH-QG1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
