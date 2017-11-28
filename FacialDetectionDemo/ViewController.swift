@@ -18,7 +18,6 @@ class ViewController: UIViewController, ARSessionDelegate {
         
         // Setup and configure AR
         let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
         
         self.sceneView.session.delegate = self
         
