@@ -63,7 +63,7 @@ class ViewController: UIViewController, ARSessionDelegate {
         }
         
         // Process the frame on a background thread
-        DispatchQueue.global(qos: .userInitiated).async {            
+        DispatchQueue.global(qos: .userInitiated).async {
             try? VNImageRequestHandler(cvPixelBuffer: frame.capturedImage, orientation: self.deviceOrientation(), options: [:]).perform([faceRequest])
         }
     }
